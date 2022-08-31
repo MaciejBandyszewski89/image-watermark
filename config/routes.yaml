@@ -1,0 +1,15 @@
+index:
+    path: /
+    controller: App\Controller\HomeController::indexAction
+
+image:
+    path: /image # URL
+    controller: App\Controller\ImageController::indexAction # to jest kurwa akcja.
+
+upload:
+    path: /image/upload
+    controller: App\Controller\ImageController::uploadAction
+
+user_register:
+    path: /user/register
+    controller: App\Controller\RegistrationController::registerAction

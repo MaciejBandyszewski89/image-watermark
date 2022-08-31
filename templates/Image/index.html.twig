@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<style>
+body
+{
+    background-color: whitesmoke;
+    color: lightgreen;
+    text-align: center;
+    font-size: 30px;
+    padding: 150px;
+}
+</style>
+<h1>Adding a New Image</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.image) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.number) }}
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+{% endblock %}

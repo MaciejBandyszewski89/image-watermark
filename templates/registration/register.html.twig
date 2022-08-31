@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <style>
+        body
+        {
+            background-color: whitesmoke;
+            color: #623b1f;
+            text-align: center;
+            font-size: 30px;
+            padding: 180px;
+        }
+    </style>
+    {{ form_start(form) }}
+        {{ form_row(form.username) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.plainPassword.first) }}
+        {{ form_row(form.plainPassword.second) }}
+
+    <button type="submit">Register!</button>
+
+    {{ form_end(form) }}
+{% endblock %}

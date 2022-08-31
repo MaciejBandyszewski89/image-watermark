@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<style>
+body
+{
+    background-color: whitesmoke;
+    color: #0fec98;
+    text-align: center;
+    font-size: 40px;
+    padding: 150px;
+}
+a
+{
+    text-decoration: none;
+    color: #030303;
+}
+</style>
+<h1> Image-watermark</h1>
+<a href="{{ path('image')}}">Upload</a><br><br>
+<a href="{{ path('user_register')}}">Register</a>
+{% endblock %}
+{#/* Mysql = "CREATE TABLE user(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHER(255),
+    lastname VARCHER(255),
+    login VARCHER(255) NOT NULL,
+    password VARCHER(255) NOT NULL,
+    email VARCHER(255) NOT NULL,
+    avatar VARCHER(255),
+)";
+
+Mysql = "INSERT INTO user (firstname, lastname, image)
+VALUES ('John','Rambo','Wietnam')";
+*/#}
