@@ -13,3 +13,7 @@ upload:
 user_register:
     path: /user/register
     controller: App\Controller\RegistrationController::registerAction
+
+user_profile:
+    path: /user/profile
+    controller: App\Controller\UserController::indexAction
