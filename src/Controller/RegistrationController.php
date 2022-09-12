@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Entity\AppUser;
+use App\Entity\User;
 use App\Form\UserType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,7 +15,7 @@ class RegistrationController extends AbstractController
 {
     public function registerAction(Request $request, UserPasswordHasherInterface $passwordHasher, ManagerRegistry $managerRegistry)
     {
-        $user = new AppUser();
+        $user = new User();
         $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);

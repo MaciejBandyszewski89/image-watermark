@@ -17,3 +17,7 @@ user_register:
 user_profile:
     path: /user/profile
     controller: App\Controller\UserController::indexAction
+
+user_login:
+    path: /user/login
+    controller: App\controller\LoginController:loginAction

@@ -15,8 +15,16 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            custom_authenticators:
+                - App\Security\ApiKeyAuthenticator
             lazy: true
             provider: users_in_memory
+            form_login:
+                login_path: app_login
+                enable_csrf: true
+                check_path: app_login
+            json_login:
+                check_path: api_login
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
