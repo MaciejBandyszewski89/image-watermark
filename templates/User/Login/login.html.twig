@@ -5,6 +5,14 @@
         <div>{{ error.massageKay|trans(error.massageData, 'security') }}</div>
     {% endif %}
 
+    <style>
+        body
+        {
+            background-image: url({{ asset('hd-wallpaper-g2668df7f5_1920.jpg') }});
+            color: #030303;
+        }
+    </style>
+
     <form action="{{ path('user_login') }}" method="post">
 
         <label for="username">Email:</label>
