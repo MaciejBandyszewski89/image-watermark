@@ -20,4 +20,4 @@ user_profile:
 
 user_login:
     path: /user/login
-    controller: App\controller\LoginController:loginAction
+    controller: App\Controller\LoginController::loginAction

@@ -10,20 +10,28 @@
         {
             background-image: url({{ asset('hd-wallpaper-g2668df7f5_1920.jpg') }});
             color: #030303;
+            text-align: center;
+            font-size: 30px;
+            padding: 250px;
+        }
+
+        #login
+        {
+            font-size: 15px;
         }
     </style>
 
     <form action="{{ path('user_login') }}" method="post">
 
         <label for="username">Email:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
+        <input type="text" id="username" name="_username" value="{{ last_username }}"/><br>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="_password"/>
 
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"><br>
 
-        <button type="submit">login</button>
+        <button id="login" type="submit">Login</button>
     </form>
 
 {% endblock %}
