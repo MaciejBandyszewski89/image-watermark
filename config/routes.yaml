@@ -21,3 +21,7 @@ user_profile:
 user_login:
     path: /user/login
     controller: App\Controller\LoginController::loginAction
+
+logout:
+    path: /logout
+    controller: App\Controller\LoginController::logout
