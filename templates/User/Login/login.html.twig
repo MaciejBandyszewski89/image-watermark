@@ -8,7 +8,7 @@
     <style>
         body
         {
-            background-image: url({{ asset('hd-wallpaper-g2668df7f5_1920.jpg') }});
+            background-image: url({{ asset('background-7025417_1920.png') }});
             font-family: Arial, Helvetica, sans-serif;
             color: #030303;
             font-size: 20px;
@@ -24,6 +24,10 @@
             border: none;
             cursor: pointer;
             width: 100%;
+        }
+        #login:hover
+        {
+            opacity: 0.8;
         }
         #password
         {
@@ -95,7 +99,7 @@
 
         <div class="container">
             <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+            <span class="psw">Forgot <a href="{{ path('resetPassword') }}">password?</a></span>
         </div>
     </form>
 

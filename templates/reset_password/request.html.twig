@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reset your password{% endblock %}
+
+{% block body %}
+
+    <style>
+        body
+        {
+            background-image: url({{ asset('background-7025417_1920.png') }});
+            font-family: Arial, Helvetica, sans-serif;
+            color: #030303;
+            font-size: 20px;
+            padding: 250px;
+        }
+
+        .btn
+        {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover
+        {
+            opacity: 0.8;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        p
+        {
+            text-align: center;
+        }
+    </style>
+    {% for flash_error in app.flashes('reset_password_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+    <h1>Reset your password</h1>
+
+    {{ form_start(requestForm) }}
+        {{ form_row(requestForm.email) }}
+        <div>
+            <p>
+                Enter your email address and we will send you a
+                link to reset your password.
+            </p>
+        </div>
+
+        <button class="btn btn-primary">Send password reset email</button>
+    {{ form_end(requestForm) }}
+{% endblock %}
